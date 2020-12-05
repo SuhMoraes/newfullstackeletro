@@ -1,0 +1,17 @@
+.nossa-loja {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.lojas {
+  text-align: center;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+}
+
+main {
+  margin: 200px auto;
+}
