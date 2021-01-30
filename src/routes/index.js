@@ -1,9 +1,15 @@
-const { Router, response } = require('express');
+const { Router } = require('express');
 
 const routes = Router();
 
 routes.get('/', (request, response) => {
-  return response.json({ sucesso: 'Você chegou até aqui!' });
+  return response.render('home');
+});
+
+routes.post('/perfil', async(request, response) => {
+  const dados = await pegarUsuarioGithub(username);
+
+  console.log(dados);
 });
 
 module.exports = routes;

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+  crossorigin="anonymous"
+/>
+  <title>Projeto NodeJs</title>
+</head>
+<body>  
+  <div class="container m-5">
+    <h1 class="title bold">Buque o seu perfil do GitHub</h1>
+    <form class="w-50" method="POST" action="/perfil">
+      <div class="form-group">
+        <label for="username">Insira o seu username</label>
+        <input
+          type="username"
+          class="form-control"
+          id="username"    
+          name="username"      
+        />
+      </div>
+      <div class="form-group">
+        <label for="cor">Escolha a sua cor favorita:</label>
+        <input type="color" class="form-control w-25" id="cor" name="cor"/>
+      </div>
+      <button type="submit" class="btn btn-success mt-2 ">Enviar</button>
+    </form>
+  </div>
+  
+</body>
+</html>
