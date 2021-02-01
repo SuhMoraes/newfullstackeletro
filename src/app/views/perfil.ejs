@@ -4,15 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Perfil GitHub</title>
+  <link rel="stylesheet" href="/styles/index.css">
 </head>
 <body>
   <div class="container">
     <article>
-      <img src="<%= usuario.avarar_url %>" alt="">
+      <img 
+      style="border: 3px solid <%= usuario.cor %>" 
+      src="<%= usuario.avatar_url %>" 
+      alt=""
+      />
       <h1><%= usuario.name %></h1>
-      <p> <%= usuario.bio %></p>
+      <p><%= usuario.bio %></p>
     </article>
-  </div>
-  
+  </div>  
 </body>
 </html>

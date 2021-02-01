@@ -1,4 +1,5 @@
 const { Router } = require('express');
+const obterUsuarioGithub = require('../functions/buscarUsername');
 
 const routes = Router();
 
@@ -7,9 +8,18 @@ routes.get('/', (request, response) => {
 });
 
 routes.post('/perfil', async(request, response) => {
-  const dados = await pegarUsuarioGithub(username);
+  const { username, cor } = request.body;
 
-  console.log(dados);
+  const { avatar_url, name, bio } = await obterUsuarioGithub(username);
+
+  const usuario = {
+    avatar_url,
+    name,
+    bio,
+    cor
+  };
+
+  return response.render('perfil' , { usuario });
 });
 
 module.exports = routes;

@@ -1,8 +1,11 @@
+
 const express = require('express');
 
 const routes = require('./src/routes');
 
 const server =  express();
+
+server.use(express.static('public'));
 
 // Configurar a entrada de dados pelo corpo da requisição
 server.use(express.json());
